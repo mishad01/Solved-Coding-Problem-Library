@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main ()
+{
+	int num,rem,rev=0;
+	cin>>num;
+	int col=num;
+	while(num>0)
+	{
+		rem=num%10;
+		rev=rev*10+rem;
+
+		num=num/10;
+    }
+   cout<<rev<<endl;
+   
+    if(col==rev)
+	{
+		cout<<"YES";
+	}
+	else
+		cout<<"NO";
+}
+	
