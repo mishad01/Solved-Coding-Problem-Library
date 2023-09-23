@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        map<int,int>mp;
+        for(int i = 0;i<nums.size();i++){
+            mp[nums[i]]++;
+        }
+        int minnum = INT_MAX;
+        int minfreq = INT_MAX;
+        for(auto x : mp){
+            int freq = x.second;
+            int num = x.first;
+            if(freq<minfreq){
+                minfreq = freq;
+                minnum = num;
+            }
+        }
+        return minnum;
+    }
+};
