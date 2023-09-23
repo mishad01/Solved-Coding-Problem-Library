@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    int n;
+    cin>>n;
+    while(n--){
+        long long res = 0;
+        int min = INT_MAX;
+        int num;
+        cin>>num;
+        int a[num];
+        for(int i = 1;i<=num;i++){
+            cin>>a[i];
+        }
+        for(int i = 1;i<=num;i++){
+            for(int j = i+1;j<=num;j++){
+                res=(a[i]+a[j]+j-i);
+                if(res<min){
+                    min=res; 
+                }
+                res = 0;
+            }
+        }
+        cout<<min<<endl;
+    }
+    return 0;
+}
