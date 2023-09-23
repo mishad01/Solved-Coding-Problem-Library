@@ -1,0 +1,19 @@
+class Solution {
+public:
+    int countNumbersWithUniqueDigits(int n) {
+        int ans = 10;
+    int start=9;
+    int current = 9;
+    if(n==0){
+        return 1;
+    }
+    if(n==1){
+        return ans;
+    }
+    for(int i = 2;i<=n;i++){
+        current = current* (start--);
+        ans = ans+current;
+    }
+    return ans;
+    }
+};

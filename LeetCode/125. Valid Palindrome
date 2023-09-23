@@ -1,0 +1,28 @@
+class Solution {
+public:
+    bool isPalindrome(string a) {
+       vector<char>v;
+    int n=a.size();
+    for(int i = 0;i<n;i++){
+        if(a[i]>64 && a[i]<91){
+            v.push_back(tolower(a[i]));
+        }
+        if(a[i]>96 && a[i]<123){
+            v.push_back(tolower(a[i]));
+        }
+        if(a[i]>47 && a[i]<58){
+            v.push_back(tolower(a[i]));
+        }
+    }
+    int num = v.size();
+    
+    for(int i = 0;i<num;i++){
+        if(v[i]!=v[num-1-i]){
+            return false;
+            break;
+        }
+
+    }
+    return true; 
+    }
+};
