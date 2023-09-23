@@ -1,39 +1,18 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-bool isSubsequence(string s, string t) {
-	int j = 0;
-	bool c = 0;
-	if (s == "") {
-		return true;
+int main(){
+	string txt;
+	cin>>txt;
+	map<char,long long>mp;
+	for(int i = 0;i<txt.size();i++){
+		mp[txt[i]]++;
 	}
-	else {
-		for (int i = 0; i < t.size(); i++) {
-			cerr << t[i] << " " << s[j] << endl;
-			if (t[i] == s[j]) {
-				j++;
-			}
-			if (j == s.size()) {
-				c = 1;
-				break;
-			}
+
+	long long max = 0;
+	for (auto x: mp) {
+		if(max<x.second){
+			max = x.second;
 		}
-	}
-	return c;
+  }
+  cout<<max;
 }
-int main() {
-	string s;
-	string t;
-	cin >> s >> t;
-	//cerr << s.size();
-	cout << isSubsequence(s, t);
-
-}
-
-/*Debug of loop:
-a a
-h c
-b c
-g c
-d c
-c c*/
