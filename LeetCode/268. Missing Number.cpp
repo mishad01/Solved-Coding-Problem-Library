@@ -10,7 +10,7 @@ int missingNumber(vector<int>& nums) {
     	vsum = nums[i]+vsum;
     }
     cerr<<sum<<" "<<vsum;
-    cout<<sum-vsum;
+    return sum-vsum;
 }
 int main() {
     int n;
