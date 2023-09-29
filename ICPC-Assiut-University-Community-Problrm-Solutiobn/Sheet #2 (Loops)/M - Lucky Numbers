@@ -1,0 +1,28 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+	int a, b;
+	cin >> a >> b;
+	int count = 0;
+	for (int i = a; i <= b; i++) {
+		int n = i;
+		bool flag = 0;
+		while (n > 0) {
+			int num = n % 10;
+			n = n / 10;
+			if (num != 7 && num != 4) {
+				flag = 1;
+			}
+		}
+		if (flag == 0) {
+			cout << i << " ";
+			count++;
+		}
+
+	}s
+	if(count == 0){
+		cout<<-1;
+	}
+
+
+}
