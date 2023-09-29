@@ -19,7 +19,7 @@ int main() {
 			count++;
 		}
 
-	}s
+	}
 	if(count == 0){
 		cout<<-1;
 	}
