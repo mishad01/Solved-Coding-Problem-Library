@@ -1,11 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
-#define n '\n'
+#define nl '\n'
 int main() {
-	int n; cin >> n;
-	int a[n];
-	for (int i = 0; i < n; i++) {
-		cin >> a[i];
-	}
+    int N;cin>>N;
+
+    for (int i = 1; i <= N; ++i) {
+        for (int j = 1; j <= i; ++j) {
+            std::cout << "*";
+        }
+        std::cout << "\n";
+    }
+
+    return 0;
 }

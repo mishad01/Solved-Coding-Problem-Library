@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nl '\n'
+int main() {
+	int a, b;
+	while (cin >> a >> b) {
+		int minn = min(a, b);
+		int maxx = max(a, b);
+		if (maxx > 0 && minn > 0) {
+			int sum = 0;
+			for (int i = minn; i <= maxx; i = i+1) {
+				sum = sum + i;
+				cerr<<sum<<endl;
+			}
+			for (int i = minn; i <= maxx; i = i+1) {
+				cout << i << " ";
+			}
+			cout << "sum =" << sum << endl;
+		}
+		else{
+			break;
+		}
+
+
+	}
+}
