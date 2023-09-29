@@ -1,23 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
-int missingNumber(vector<int>& nums) {
-    int num = 0;
-    for (int i = 0; i <= nums.size(); i++) {
-        for (int j = 0; j < nums.size(); j++) {
-            if (i != nums[j]) {
-                num = i;
-            }
-        }
-    }
-    return num;
-}
 int main() {
-    int n;
-    cin >> n;
-    vector<int> numbers(n);
-    for (int i = 0; i < numbers.size(); ++i) {
-        cin >> numbers[i] ;
+    int n ;
+    cin>>n;
+    int a[n];
+    map<int,int>mp;
+    for(int i = 0;i<n;i++){
+        cin>>a[i];
+        mp[a[i]]++;
     }
-    cout << missingNumber(numbers);
+    for(int i = 0;i<n;i++){
+        cerr<<mp[a[i]]<<endl;
+    }
+    for(auto x : mp){
+        cout<<x.first<<" "<<x.second<<endl;
+    }
 
 }
