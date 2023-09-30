@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nl '\n'
+int main() {
+	int q;
+	cin>>q;
+	while(q--){
+		int a,b;cin>>a>>b;
+		int minn = min(a,b);
+		int maxx = max(a,b);
+		int sum = 0;
+		for(int i = minn+1;i<maxx;i++){
+			if(i%2!=0){
+				cerr<<i<<endl;
+				sum = sum +i;
+			}
+		}
+		cout<<sum<<nl;
+	}
+}
