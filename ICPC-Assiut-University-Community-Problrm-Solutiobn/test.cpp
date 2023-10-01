@@ -1,22 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define nl '\n'
- int fibonacci(int n){
- 	if(n==0){
- 		return 0;
- 	}
- 	if(n==1){
- 		return 1;
- 	}
- 	int s1 = fibonacci(n-1);
- 	int s2 = fibonacci(n-2);
- 	return s1 + s2;
- }
-int main(){
-	int n ;
-	cin>>n;
-	for(int i = 0;i<n;i++){
-		cout<<fibonacci(i)<<" ";
+const int N = 1e5 + 9;
+bool f[N];
+int main () {
+	int n;
+	cin >> n;
+	f[1] = true;
+	vector<int>v;
+	for (int i = 2; i <= n; i++) {
+		if (f[i] == false) {
+			v.push_back(i);
+			for ( int j = i+i; j <= n; j+=i) {
+				f[j] = true;
+			}
+		}
 	}
+	for (auto x : v) {
+		cout << x << endl;
+	}
+	//cout << "Count : " << count << endl;
 }
