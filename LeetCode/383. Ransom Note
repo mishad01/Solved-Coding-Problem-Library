@@ -1,0 +1,25 @@
+class Solution {
+public:
+    bool canConstruct(string r, string m) {
+	int count = 0;
+	for(int i = 0;i<r.size();i++){
+		bool found = false;
+		for(int j = 0;j<m.size();j++){
+			if(r[i]==m[j]){
+				found = true;
+				m[j]=' ';
+				count++;
+				if (count == r.size()) {
+                    return true;
+                }
+                break;
+			}
+		}
+		if(!found){
+			return false;
+		}
+	}
+	return true;
+}
+
+};

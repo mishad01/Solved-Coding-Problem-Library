@@ -1,17 +1,28 @@
-#include<bits/stdc++.h>
-using namespace std;
-int missingNumber(vector<int>& nums) {
-    int sum = 0;
-    int vsum = 0;
-    for(int i = 1;i<=nums.size();i++){
-    	sum = i+sum;
+
+
+
+
+bool canConstruct(string r, string m) {
+    int count = 0;
+    for (int i = 0; i < r.size(); i++) {
+        bool found = false;  // Flag to check if the character in ransom note is found in the magazine
+        for (int j = 0; j < m.size(); j++) {
+            if (r[i] == m[j]) {
+                found = true;
+                m[j] = ' ';  // Mark the character as used to avoid using it again
+                count++;
+                if (count == r.size()) {
+                    return true;
+                }
+                break;  // Break the inner loop as we found a match for this character
+            }
+        }
+        if (!found)  // If a character in ransom note was not found in magazine, return false
+            return false;
     }
-    for(int i = 0;i<nums.size();i++){
-    	vsum = nums[i]+vsum;
-    }
-    cerr<<sum<<" "<<vsum;
-    return sum-vsum;
+    return true;
 }
+
 int main() {
     int n;
     cin >> n;
