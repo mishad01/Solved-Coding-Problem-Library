@@ -1,0 +1,21 @@
+class Solution {
+public:
+	vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
+		int n1, n2;
+		n1 = nums1.size();
+		n2 = nums2.size();
+		vector<int>v;
+		map<int, int>mp;
+		for (int i = 0; i < n1; i++) {
+			mp[nums1[i]]++;
+		}
+		for (int i = 0; i < n2; i++) {
+			auto it = mp.find(nums2[i]);
+			if(it != mp.end() && it->second>0){
+				v.push_back(nums2[i]);
+					mp[nums2[i]] = 0;
+			}
+		}
+		return v;
+	}
+};
