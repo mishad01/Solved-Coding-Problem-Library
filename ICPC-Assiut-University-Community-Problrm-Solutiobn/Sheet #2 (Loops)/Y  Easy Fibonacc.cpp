@@ -1,4 +1,3 @@
-// Fibonacci Series using Space Optimized Method 
 #include<bits/stdc++.h> 
 using namespace std; 
 
