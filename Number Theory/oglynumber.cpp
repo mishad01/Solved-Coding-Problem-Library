@@ -19,5 +19,7 @@ int main() {
         }
     }
     sort(v.begin(),v.end());
-    cout<<"The 1500'th ugly number is "<<v[1500-1]<<".";
+    for(auto x: v){
+      cout<<x<<endl;
+    }
 }
