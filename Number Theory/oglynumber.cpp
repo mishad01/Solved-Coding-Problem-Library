@@ -1,26 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-int32_t main() {
-  ios_base::sync_with_stdio(0);
-  cin.tie(0);
-  int n; cin >> n;
-  long long gc = 0;
-  for (int i = 1; i <= n; i++) {
-    long long x; cin >> x;
-    gc = __gcd(gc, x);
-  }
-
-  int divs = 0;
-  for (int i = 1; 1LL * i * i <= gc; i++) {
-  	cerr<<i<<endl;
-    if (gc % i == 0) {
-      divs++;
-      if (i != gc / i) {
-        divs++;
-      }
+#define ll long long
+#define nl '\n'
+const ll MAX = 1e18;
+int main() {
+    ll p2 = 1;
+    vector<ll>v;
+    for (int x = 0; p2<MAX; x++, p2 *= 2) { //Here p2 *= 2 means 2^x
+        //p2 = 2^x;
+        ll p3 = 1;
+        for (int y = 0; p2*p3<MAX; y++, p3 *= 3) {
+            //p3 = 3^x;
+            ll p5 = 1;
+            for (int z = 0; p2*p3*p5<MAX; z++, p5 *= 5) {
+                //p5 = 5^x;
+                v.push_back(p2*p3*p5);
+            }
+        }
     }
-  }
-  cout << divs << '\n';
-  return 0;
+    sort(v.begin(),v.end());
+    cout<<"The 1500'th ugly number is "<<v[1500-1]<<".";
 }
