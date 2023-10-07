@@ -15,7 +15,6 @@ int fib(int n)
 	return b; 
 } 
 
-// Driver code 
 int main() 
 { 
 	int n; cin>>n;
