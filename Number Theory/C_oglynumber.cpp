@@ -19,7 +19,4 @@ int main() {
         }
     }
     sort(v.begin(),v.end());
-    for(auto x: v){
-      cout<<x<<endl;
-    }
-}
+     cout << "The 1500'th ugly number is " << v[1500 - 1] << ".\n";}
