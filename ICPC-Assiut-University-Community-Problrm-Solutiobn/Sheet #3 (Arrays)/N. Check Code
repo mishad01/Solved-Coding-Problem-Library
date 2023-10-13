@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nl '\n'
+bool check(int a, int b, char x[]) {
+	int length = a + b + 1;
+	for (int i = 0; i < length; i++) {
+		if (i == a) continue;
+		if (!isdigit(x[i])) {
+			return false;
+		}
+	}
+	return true;
+}
+int main() {
+	int n, m;
+	cin >> n >> m;
+	char z[50];
+	cin >> z;
+	if (z[n] != '-') {
+		cout << "No\n";
+	}
+	else if (check(n, m, z)) {
+		cout << "Yes";
+	}
+	else {
+		cout << "No";
+	}
+}
