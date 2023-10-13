@@ -3,12 +3,18 @@ using namespace std;
 #define ll long long
 #define nl '\n'
 int main() {
-	map<char,int>mp;
 	string a; cin >> a;
+	bool check = true;
 	for(int i = 0;i<a.size();i++){
-		mp[a[i]]++;
+		if(a[i]!=a[a.size()-1-i]){
+			check=false;
+			break;
+		}
 	}
-	for(auto x : mp){
-		cout<<x.first<<" : "<<x.second<<nl;
+	if(check){
+		cout<<"YES"<<nl;
+	}
+	else{
+		cout<<"NO"<<nl;
 	}
 }
