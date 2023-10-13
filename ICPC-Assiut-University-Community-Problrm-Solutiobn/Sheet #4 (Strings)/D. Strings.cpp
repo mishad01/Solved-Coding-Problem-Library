@@ -5,10 +5,8 @@ using namespace std;
 int main(){
 	string a,b;
 	cin>>a>>b;
-	if(a.size()<b.size()){
-		cout<<a;
-	}
-	else{
-		cout<<b;
-	}
+	cout<<a.size()<<" "<<b.size()<<nl;
+	cout<<a+b<<nl;
+	swap(a[0],b[0]);
+	cout<<a<<" "<<b;
 }
