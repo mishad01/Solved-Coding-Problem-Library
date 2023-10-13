@@ -1,22 +1,16 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
-#define ll long long
-#define nl '\n'
 int main() {
-	int q;
-	cin >> q;
-	while (q--) {
-		string a, b; cin >> a >> b;
-		string c = "";
-		int maxLength = max(a.size(), b.size());
-		for (int i = 0; i < maxLength; i++) {
-			if(i<a.size()){
-				c=c+a[i];
-			}
-			if(i<b.size()){
-				c=c+b[i];
+	int n;
+	cin >> n;
+	for (int i = 1; i <= n; i++) {
+		for (int j = 1; j <= n; j++) {
+			if (i == 1 || i == n || j == 1 || j == n) {
+				cout << "* ";
+			} else {
+				cout << "  ";
 			}
 		}
-		cout << c << nl;
+		cout << "\n";
 	}
 }
