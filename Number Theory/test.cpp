@@ -2,40 +2,23 @@
 using namespace std;
 #define ll long long
 #define nl '\n'
-int const N = 1e6 + 9;
-int f[N];
-vector<int>primes;
-void seive() {
-    f[1] = true;
-    for (int i = 2; i < N; i++) {
-        f[i] = true;
-    }
-    for (int i = 2; i < N; i++) {
-        if (f[i]) {
-            for (int j = i + i; j < N; j += i) {
-                f[j] = false;
-            }
-        }
-    }
-    for (int i = 2; i < N; i++) {
-        if (f[i]) {
-            primes.push_back(i);
-        }
-    }
+int main(){
+    double n , k,a ,operation;
+    cin >>n >> k>> a;
+    operation = (n * k) / a ;
+    // cout << operation ;
+    long long myNum = operation;
 
-}
-bool is 
-int main() {
-    seive();
-    ll q;
-    cin>>q;
-    while(q--){
-        int n;
-        cin>>n;
-        int count = 0;
-        for(int i = 1;i<=n;i++){
-            
-        }
-        cout<<count<<nl;
+    
+    if (operation == int(operation))
+    cout<< "int" ;
+    else if (operation == myNum) {
+        cout<< "long long" ;
+
     }
+    else{
+        cout<< "double" ;
+
+    }
+    return 0;
 }
