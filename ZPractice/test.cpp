@@ -1,41 +1,15 @@
-#include <iostream>
-#include <string>
-
+#include<bits/stdc++.h>
 using namespace std;
-
-int count_operations(int n, int m, string x, string y) {
-    int ans = 0;
-
-    while (x != y) {
-        if (x.find(y) != string::npos) {
-            return ans + 1;
-        }
-
-        x += x;
-        ans++;
-
-        if (x.size() > n * m) {
-            return -1;
-        }
-    }
-
-    return ans;
-}
-
+#define ll long long
+#define nl '\n'
 int main() {
-    int t;
-    cin >> t;
-
-    while (t--) {
-        int n, m;
-        cin >> n >> m;
-
-        string a, b;
-        cin >> a >> b;
-
-        int result = count_operations(n, m, a, b);
-        cout << result << endl;
+    int n;
+    cin>>n;
+    int count = 0;
+    while(n!=1){
+        int num = n%10;
+        count++;
+        n/=10;
     }
-
-    return 0;
+    cout<<count;
 }
