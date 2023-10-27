@@ -1,0 +1,4 @@
+how to take last 1,2 or 3 or any last digit of a number 
+for last 1 digit = num%10;
+for last 2 digi = num%100;
+for last 3 digit = num%1000;

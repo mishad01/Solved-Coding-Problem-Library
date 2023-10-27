@@ -1,0 +1,2 @@
+digitSum+=s[i]-'0';
+if we just minus -'0'; then we will get the int number
