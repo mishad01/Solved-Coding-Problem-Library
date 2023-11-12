@@ -1,128 +1,86 @@
-#include<iostream>
-#include<vector>
 #include<bits/stdc++.h>
 using namespace std;
 
-int main ()
+	
+int main()
 {
-    vector <int>v;
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
-    v.push_back(4);
-cout<<v.begin();
+//**************************************
+	//************ V E C T O R *************
+	//**************************************
+
+	//to give input in vector(push_back);
 
 
+    //type1 of input; 
+	//vector<int>a;
+	// a.push_back(10);
+	// a.push_back(20);
+	// a.push_back(30);
+	// //cout<<a[0];//(proces1)
 
-   /* vector <int> :: iterator num;
+	// for(int i = 0;i<a.size();i++ )
+	// {
+	// 	cout<<a[i]<<endl;
+	// }
 
 
+	//type 2 of input
+	// vector<int>a;
+	// int n;
+	// cin>>n;
+	// for(int i = 0;i<n;i++)
+	// {
+	// 	int x;
+	// 	cin>>x;
+	// 	a.push_back(x);
+	// }a.pop_back();
+	// for(int i = 0;i<a.size();i++)
+	// {
+	// 	cout<<a[i]<<endl;
+	// }
 
-    for (num = v.begin();num != v.end();num++)
+	//type 3 of input
+
+	//ITERATOR IS ACTUALLY A POINTER 
+
+	//vector<int>cur({1,2,3,4,5});
+	 //vector<int>:: iterator beg =cur.begin();
+	// beg++;
+	// //cout<<(*beg)<<endl;
+
+	// for(vector<int>::iterator it = cur.begin()+2; it!=cur.end();it++)
+	// {
+	// 	cout<<(*it)<<endl;
+	// }
+	// auto tt = cur.begin()+1;
+	// //cout<<(*tt)<<endl;
+    
+    // reverse(cur.begin(),cur.begin()+3);
+    // for(auto x:cur) // for(vector<int>::iterator it = cur.begin()+2; it!=cur.end();it++)
+    // {
+    // 	cout<<x<<" ";
+    // }
+	// 
+
+	///////VECTOR USINBG STRING
+
+    //  string s= "abcd";
+    //  cout<<s<<" ";
+    //  //s.push_back('e');
+    //  s+='e';
+    //  //s='a'+s;
+    // cout<<endl<< s<<" ";
+    // s='a'+s;
+    // cout<<endl<< s<<" ";
+    
+
+    //erase
+    vector<int>a = vector<int>({1,2,3,4,5});
+    a.erase(a.begin(),a.begin()+4);
+    for(auto x: a)
     {
-        cout<<*num<<endl;
-    }*/
-
-
-    /*int array[100];
-    array[0] =1;
-    array[1] =2;
-    array[2] =3;*/
-
-
-    /*vector <int> v1;
-    v1.push_back(100);
-    v1.push_back(22);
-    v1.push_back(38);
-    v1.push_back(78);
-    v1.push_back(55);
-    v1.push_back(90);
-
-
-
-    for (int i=0;i<v1.size();i++)
-    {
-        cout<<v1[i]<<" ";
+    	cout<<x<<" ";
     }
-cout<<endl;
-    sort(v1.begin(),v1.end());
-    for (int i=0;i<v1.size();i++)
-    {
-        cout<<v1[i]<<" ";
-    }*?
-
-
-   /* cout<<endl;
-     for (int i=0;i<v2.size();i++)
-    {
-        cout<<v2[i]<<" ";
-    }
-    cout<<endl;
-
-    cout<<"After swap v1"<<endl;
-
-    swap(v1,v2);
-
-     for (int i=0;i<v1.size();i++)
-    {
-        cout<<v1[i]<<" ";
-    }
-    cout<<endl;
-
-    for (int i=0;i<v2.size();i++)
-    {
-        cout<<v2[i]<<" ";
-    }
-    cout <<endl;
-//////////////////////////////////////////////
-    cout<<"Before swap v2"<<endl;
-
-    for (int i=0;i<v2.size();i++)
-    {
-        cout<<v2[i]<<" ";
-    }
-    cout<<endl;
-
-    cout<<"After swap v2"<<endl;
-
-    swap(v2,v1);
-
-     for (int i=0;i<v1.size();i++)
-    {
-        cout<<v2[i]<<" ";
-    }
-    cout <<endl;*/
-
-   /* v.insert(v.begin()+3,10);
-     for (int i=0;i<v.size();i++)
-    {
-        cout<<v[i]<<" ";
-    }*/
-
-/* v.erase(v.begin()+2,v.begin()+4);
-     for (int i=0;i<v.size();i++)
-    {
-        cout<<v[i]<<" ";
-    }/*
-
-
-
-   /* v.pop_back();
-    for (int i=0;i<v.size();i++)
-    {
-        cout<<v[i]<<" ";
-    }*/
-
-
-   /* cout<<"\n"<<v.front();
-    cout<<"\n"<<v.back()<<endl;
-    v.clear();
-    cout<<v.size()<<endl;
-
-    if (v.empty())
-        cout<<"Empty"<<endl;
-    else
-        cout<<"Not Empty"<<endl;*/
 
 
 
