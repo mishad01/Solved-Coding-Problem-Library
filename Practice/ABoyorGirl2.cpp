@@ -21,4 +21,5 @@ int main ()
   {
     cout<<"IGNORE HIM!"<<endl;
   }
+  cout<<"Hello";
 }
