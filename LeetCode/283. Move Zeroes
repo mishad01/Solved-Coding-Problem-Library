@@ -1,0 +1,18 @@
+class Solution {
+public:
+    void moveZeroes(vector<int>& v) {
+        int n = v.size();
+        int lastNonZeroFoundat = 0;
+
+    for (int i = 0; i < n; i++) {
+        if(v[i]!=0){
+            v[lastNonZeroFoundat]=v[i];
+            lastNonZeroFoundat++;
+        }
+    }
+    cerr<<lastNonZeroFoundat;
+    for (int i = lastNonZeroFoundat; i < n; i++) {
+        v[i]=0;
+    }
+    }
+};
