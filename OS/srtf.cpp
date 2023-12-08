@@ -12,8 +12,8 @@ int main(){
     int sum_wait = 0; // Sum of waiting times for all processes.
     int sum_turnaround = 0; // Sum of turnaround times for all processes. 
 
-    // cout << "Enter Number of Process" << endl;
-    // cin >> n;
+    cout << "Enter Number of Process" << endl;
+    cin >> n;
 
     for(i = 0; i < n; i++){
         cin >> at[i];
