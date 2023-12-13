@@ -3,41 +3,41 @@ using namespace std;
 #define ll long long
 #define nl '\n'
 
-void implimentionFirstFit(int process[],int ps,int block[],int bs){
-	int alloc[ps];
-	int occup[bs];
-
-	for(int i = 0;i<ps;i++){
-		alloc[i]=-1;
+int main() {
+	ios_base::sync_with_stdio(0);
+	cin.tie(0);
+	int n;
+	cin >> n;
+	int at[n], bt[n], rt[n];
+	for (int i = 0; i < n; i++) {
+		cin >> at[i];
+		cin >> bt[i];
+		//bt[i] = rt[i];
 	}
-
-	for(int i = 0;i<ps;i++){
-		for(int j = 0;j<bs;j++){
-			if(process[i]<=block[j]){
-				alloc[i]=j;
-				block[j]-=process[i];
-				break;
+	 rt[99] = 9999;
+	int time;
+	int remain = 0;
+	int ct;
+	int sum_wait;
+	int sum_turnaround;
+	int smallest;
+	for (time = 0; remain != n; time++) {
+		smallest = 99;
+		for (int j = 0; j < n; j++) {
+			if (at[j] <= time && rt[j] < rt[smallest] && rt[j] > 0) {
+				smallest = j;
 			}
 		}
+		rt[smallest]--;
+
+		if(rt[smallest]==0){
+			remain++;
+			ct = time + 1; //in how unit of time a process completed checks that
+			 printf("\nP[%d]\t|\t%d\t|\t%d", smallest + 1, ct - at[smallest], ct - bt[smallest] - at[smallest]);
+
+            sum_wait += ct - bt[smallest] - at[smallest];
+            sum_turnaround += ct - at[smallest];
+
+		}
 	}
-
-	printf("\nProcess No.\tProcess Size\tBlock no.\n");
-    for (int i = 0; i < ps; i++)
-    {
-        printf("%d \t\t\t %d \t\t\t", i+1, process[i]);
-        if (alloc[i] != -1)
-            printf("%d\n",alloc[i] + 1);
-        else
-            printf("Not Allocated\n");
-    }
-
-}
-int main() {
-	int processSize[]={20,60,70,40};
-	int blockSize[]={100,50,30,120,35};
-	int ps = sizeof(processSize)/sizeof(processSize[0]);
-	int bs = sizeof(blockSize)/sizeof(blockSize[0]);
-
-	implimentionFirstFit(processSize,ps,blockSize,bs);
-
 }
