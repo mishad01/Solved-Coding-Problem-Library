@@ -2,45 +2,25 @@
 using namespace std;
 #define ll long long
 #define nl '\n'
-bool isPrime(int n) {
-    int divisors = 0;
-    for (int i = 1; i <= n; i++) {
-        if (n % i == 0) {
-            divisors++;
-        }
+vector<int> getConcatenation(vector<int>& nums) {
+    int n = nums.size();
+    vector<int>ans(n*2);
+    for(int i = 0;i<n;i++){
+        ans[i] = nums[i];
+        ans[i + n] = nums[i]; // Correct index calculation
+        //cout << ans[i] << endl; 
     }
-    if (divisors == 2) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-bool isAlmostPrime(int n){
-    int primeDivisor = 0;
-    for(int i = 1;i<=n;i++){
-        if(n%i==0){
-            if(isPrime(i)){
-                primeDivisor++;
-            }
-        }
-    }
-    if(primeDivisor==2){
-        return true;
-    }
-    else{
-        return false;
+    for(int i = 0;i<ans.size();i++){
+        cout<<ans[i]<<endl;
     }
 }
 int main() {
     int n;
-    cin >> n;int count = 0;
-    for (int i = 1; i <= n; ++i)
-    {
-        if(isAlmostPrime(i)==true){
-            count++;
-        }
+    cin >> n;
+    vector<int>v(n);
+    for (int i = 0; i < n; i++) {
+        cin >> v[i];
+        //cout << v[i] << nl;
     }
-    cout<<count;
-
+    getConcatenation(v);
 }
