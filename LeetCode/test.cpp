@@ -1,33 +1,35 @@
-#include <iostream>
-#include <vector>
-
+#include<bits/stdc++.h>
 using namespace std;
+#define ll long long
+#define nl '\n'
+int maxWidthOfVerticalArea(vector<vector<int>>& v) {
+    int n = v.size();
+    set<int>s;
+    for (int i = 0; i < n; i++) {
+        s.insert(v[i][0]);
+    }
+    int maxx = 0;
+    int prev = *s.begin();
+    cerr<<prev;
+    for(auto it = next(s.begin()); it != s.end();it++){
+        int current = *it;
+        maxx = max(maxx,abs(current-prev));
+        prev = current;
+    }
+    return maxx;
+}
 
 int main() {
     int n;
-    cout << "Enter the number of rows: ";
     cin >> n;
-
-    vector<vector<int>> v(n); // Initializing vector of vectors with n rows
-
-    cout << "Enter the elements:" << endl;
+    vector<vector<int>> v(n);
     for (int i = 0; i < n; ++i) {
-        cout << "Row " << i+1 << ": ";
-        for (int j = 0; j < 3; ++j) { // Assuming each row has 3 elements
+        for (int j = 0; j < 3; ++j) {
             int num;
             cin >> num;
-            v[i].push_back(num); // Pushing elements into the current row
+            v[i].push_back(num);
         }
     }
 
-    // Printing the vector of vectors
-    cout << "The vector is:" << endl;
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < v[i].size(); ++j) {
-            cout << v[i][j] << " ";
-        }
-        cout << endl;
-    }
-
-    return 0;
+    cout<<maxWidthOfVerticalArea(v);
 }
