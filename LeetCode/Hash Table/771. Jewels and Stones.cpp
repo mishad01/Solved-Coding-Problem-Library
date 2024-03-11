@@ -7,7 +7,7 @@ int main() {
     cin>>s1>>s2;
     //int maxx = max(s1.size(),s2.size());
     int count = 0;
-    set<char>s;
+    //set<char>s;
     // for(int i = 0;i<s1.size();i++){
     //    s.insert(s1[i]);
     // }
