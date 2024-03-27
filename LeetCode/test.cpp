@@ -1,14 +1,13 @@
-#include <bits/stdc++.h>
-using namespace std;
-     
-int main() {
-    int l1,r1,l2,r2;
-    cin>>l1>>r1>>l2>>r2;
-    for(int i = l1;i<=r1;i++){
-        if(i<l2 || i>r2 ){
-            cout<<i<<" ";
-        }
-    }
+#include <iostream>
+#include <vector>
+#include <string>
 
+int main() {
+    std::vector<std::string> words = {"abc", "car", "ada", "racecar", "cool"};
+    
+    for(auto x : words) {
+        std::cout << x[i] << std::endl;
+    }
+    
     return 0;
 }
