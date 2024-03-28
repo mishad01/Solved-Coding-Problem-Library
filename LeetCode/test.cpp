@@ -1,13 +1,14 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nl '\n'
 int main() {
-    std::vector<std::string> words = {"abc", "car", "ada", "racecar", "cool"};
-    
-    for(auto x : words) {
-        std::cout << x[i] << std::endl;
+ string s;
+ getline(cin,s);
+ for(int i = 0;i<s.size();i++){
+    for(int j = 0;j<s[i].size();j++){
+        cout<<s[j]<<nl;
     }
-    
-    return 0;
+    cout<<i<<nl;
+ } 
 }
