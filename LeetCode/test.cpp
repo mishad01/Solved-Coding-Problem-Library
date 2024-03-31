@@ -1,14 +1,22 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define ll long long
-#define nl '\n'
+#include <iostream>
+#include <map>
+#include <string>
+#include <vector>
+
 int main() {
- string s;
- getline(cin,s);
- for(int i = 0;i<s.size();i++){
-    for(int j = 0;j<s[i].size();j++){
-        cout<<s[j]<<nl;
+    std::vector<std::string> words = {"ad", "bd", "aaab", "baa", "badab"};
+    std::map<std::string, int> wordMap;
+
+    // Iterate through the vector
+    for (int i = 0; i < words.size(); ++i) {
+        // Insert each word into the map with its length as the value
+        wordMap[words[i]] = words[i];
     }
-    cout<<i<<nl;
- } 
+
+    // Printing the map
+    for (const auto& pair : wordMap) {
+        std::cout << "Word: " << pair.first << ", Length: " << pair.second << std::endl;
+    }
+
+    return 0;
 }
