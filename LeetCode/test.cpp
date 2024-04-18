@@ -5,13 +5,10 @@ using namespace std;
 #define nl '\n'
 
 int main() {
-    char a;
-    cin >> a;
-    // Convert character to integer
-    int num = a - '0';
-    // Increment integer by 1
-    num++;
-    // Convert integer back to string
-    string b = to_string(num);
-    cout << b << nl;
+    string num1,num2;
+    cin>>num1>>num2;
+    int res = stoi(num1);
+    int res2 = stoi(num2);
+    cout<<res*res2;
+
 }
