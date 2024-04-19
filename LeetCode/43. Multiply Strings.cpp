@@ -20,6 +20,6 @@ public:
         if (startPos != string::npos) {
             return result.substr(startPos);
         }
-        return "0"; 
+        return "00"; 
     }
 };
