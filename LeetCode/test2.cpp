@@ -1,12 +1,16 @@
-#include<bits/stdc++.h>
-using namespace std;
-int main() {
-    vector<int>v;
-    v.push_back(1);
-    v.push_back(2);
-    v.push_back(3);
-    for(int i = 0;i<3;i++){
-        cout<<v[i]<<endl;
+class Solution {
+public:
+    int maximumWealth(vector<vector<int>>& v) {
+        int n = v.size();
+        set<int>s;
+        for(int i = 0;i<n;i++){
+            int sum = 0;
+            for(int j = 0;j<v[i].size();j++){
+                sum = sum +v[i][j];
+            }
+            s.insert(sum);
+        }
+        int max_wealth = *s.rbegin(); 
+        return max_wealth;
     }
-
-}
+};
