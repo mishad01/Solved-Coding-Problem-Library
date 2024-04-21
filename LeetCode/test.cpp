@@ -9,6 +9,6 @@ int main() {
     cin>>num1>>num2;
     int res = stoi(num1);
     int res2 = stoi(num2);
-    cout<<res*res2;
+    cout<<res*res2*;
 
 }
