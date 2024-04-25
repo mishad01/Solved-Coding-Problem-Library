@@ -12,7 +12,8 @@ public:
             if(i!=j)
                s+=mat[i][j];
             i++;
-            j--;   
+            j--;
+            j;   
         }
         return s;
     }
