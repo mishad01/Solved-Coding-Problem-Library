@@ -1,16 +1,16 @@
-class Solution {
-public:
-    int maximumWealth(vector<vector<int>>& v) {
-        int n = v.size();
-        set<int>s;
-        for(int i = 0;i<n;i++){
-            int sum = 0;
-            for(int j = 0;j<v[i].size();j++){
-                sum = sum +v[i][j];
-            }
-            s.insert(sum);
+#include<bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define nl '\n'
+int main() {
+    int m,n;
+    cin>>m>>n;
+    int **p = new int*[m];
+    for(int i = 0;i<m;i++){
+        p[i]=new int [n];
+        for(int j = 0;j<n;j++){
+            cin>>p[i][j];
         }
-        int max_wealth = *s.rbegin(); 
-        return max_wealth;
     }
-};
+
+}
