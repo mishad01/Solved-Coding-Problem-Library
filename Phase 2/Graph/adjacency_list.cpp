@@ -11,15 +11,15 @@ int main() {
     	int u,v;
     	cin>>u>>v;
     	g[u].push_back(v);
-        //g[v].push_back(u);
+        g[v].push_back(u);
     }
     for(auto x : g[2]){
-        cout<<x<<nl;
+        cout<<x<<" ";
     }
     //degree
-    for(int i = 1;i<=n;i++){
-        cout<<g[i].size()<<' ';
-    }
+    // for(int i = 1;i<=n;i++){
+    //     cout<<g[i].size()<<' ';
+    // }
     cout<<nl;
 
 }
