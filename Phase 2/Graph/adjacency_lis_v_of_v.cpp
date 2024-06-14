@@ -15,11 +15,7 @@ int main() {
  	g[u].push_back(v);
  	g[v].push_back(u); 
  }
- // for(auto x : g){
- // 	cout<<x.size()<<endl;
- //    }
     for(int i = 1;i<=n;i++){
-    	// maxx = max(g[i].size(),maxx);
     	if(maxx<g[i].size()){
     		val=i;
     		maxx = g[i].size();
