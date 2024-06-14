@@ -7,16 +7,7 @@ vector<int>g[N];
 int dis[N];
 bool vis[N];
 
-void dfs(int u) {
-	cout << u << " ";
-	vis[u] = true;
-	for (auto x : g[u]) {
-		if (!vis[x]) {
-
-			dfs(x);
-		}
-	}
-}
+//Find the shortest Path
 
 void bfs(int u){
 	queue<int>q;
@@ -24,9 +15,9 @@ void bfs(int u){
 	vis[u]=true;
 	dis[u]=0;
 	while(!q.empty()){
-		int fv = q.front();
+		int fv = q.front(); //First Vertex
 		q.pop();
-		//cout<<fv<<" ";
+		cout<<fv<<" ";
 		for(auto x : g[fv]){
 			if(!vis[x]){
 				q.push(x);
@@ -47,7 +38,5 @@ int main() {
 		g[v].push_back(u);
 	}
 	bfs(1);
-	for(int i = 1;i<=n;i++){
-		cout<<dis[i];
-	}
+	
 }
