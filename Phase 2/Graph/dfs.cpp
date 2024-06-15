@@ -7,6 +7,8 @@ vector<int>g[N];
 bool vis[N];
 
 //Function to check in which 3node we are in
+
+//We use dfs for traversing
 void dfs(int u) {  
     vis[u] = true;  // Mark the current node as visited
     for (auto v : g[u]) {  // Iterate through all the adjacent nodes

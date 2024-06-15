@@ -6,8 +6,9 @@ const int N = 1e5 + 1;
 vector<int>g[N];
 int dis[N];
 bool vis[N];
+int par[N];
 
-//Find the shortest Path
+//Shortest Path using bfs
 
 void bfs(int u){
 	queue<int>q;
@@ -15,19 +16,19 @@ void bfs(int u){
 	vis[u]=true;
 	dis[u]=0;
 	while(!q.empty()){
-		int fv = q.front(); //First Vertex
+		int fv = q.front();
 		q.pop();
-		cout<<fv<<" ";
+		//cout<<fv<<" ";
 		for(auto x : g[fv]){
 			if(!vis[x]){
 				q.push(x);
+				par[x]=fv; //From which parent it came
 				dis[x]=dis[fv]+1;
 				vis[x]=true;
 			}
 		}
 	}
 }
-
 int main() {
 	int n, m;
 	cin >> n >> m;
@@ -38,5 +39,16 @@ int main() {
 		g[v].push_back(u);
 	}
 	bfs(1);
+	//Bfs Distance
+	// for(int i = 1;i<=n;i++){
+	// 	cout<<dis[i]<< " ";
+	// }
+
+	int v = 9;
+	while(v!=1){
+		cout<<v<<" ";
+		v = par[v];
+	}
+	cout<<1<<nl;
 	
 }

@@ -6,7 +6,9 @@ const int N = 1e5 + 1;
 vector<int>g[N];
 int dis[N];
 bool vis[N];
+int par[N];
 
+//We use dfs for traversing
 void dfs(int u) {
 	cout << u << " ";
 	vis[u] = true;
@@ -18,6 +20,7 @@ void dfs(int u) {
 	}
 }
 
+//We use bfs to find the shortest path
 void bfs(int u){
 	queue<int>q;
 	q.push(u);
@@ -30,6 +33,7 @@ void bfs(int u){
 		for(auto x : g[fv]){
 			if(!vis[x]){
 				q.push(x);
+				par[x]=fv; //From which parent it came
 				dis[x]=dis[fv]+1;
 				vis[x]=true;
 			}
@@ -47,7 +51,15 @@ int main() {
 		g[v].push_back(u);
 	}
 	bfs(1);
-	for(int i = 1;i<=n;i++){
-		cout<<dis[i];
+	//Bfs Distance
+	// for(int i = 1;i<=n;i++){
+	// 	cout<<dis[i]<< " ";
+	// }
+
+	int v = 9;
+	while(v!=1){
+		cout<<v<<" ";
+		v = par[v];
 	}
+	cout<<1<<nl;
 }
