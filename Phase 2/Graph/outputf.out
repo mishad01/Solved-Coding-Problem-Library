@@ -1,1 +1,9 @@
-3 3 3 3 1 1 1 1 2 
+Node 1 - Indegree: 3, Outdegree: 3
+Node 2 - Indegree: 3, Outdegree: 3
+Node 3 - Indegree: 3, Outdegree: 3
+Node 4 - Indegree: 3, Outdegree: 3
+Node 5 - Indegree: 1, Outdegree: 1
+Node 6 - Indegree: 1, Outdegree: 1
+Node 7 - Indegree: 1, Outdegree: 1
+Node 8 - Indegree: 1, Outdegree: 1
+Node 9 - Indegree: 2, Outdegree: 2

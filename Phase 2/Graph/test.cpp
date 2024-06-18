@@ -38,7 +38,7 @@ int main() {
         g[v].push_back(u);
     }
     bfs(1);
-    cout<<"Size: "<<g.soz
+    cout<<"Size: "
     //Bfs Distance
     // for(int i = 1;i<=n;i++){
     //  cout<<dis[i]<< " ";
