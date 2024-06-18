@@ -17,21 +17,32 @@ int main() {
         cin >> u >> v;
         g[u].push_back(v);
         indegree[v]++;
-        outdegree[u]++;
     }
 
-    for (int i = 1; i <= n; i++)
-    {
-        cout<<i<<" indegree "<<indegree[i]<<nl;
+    vector<int>ans;
+    while (ans.size() < n) {
+        int cur = 0;
+        for (int i = 1; i <= n; i++) {
+            
+            if (!vis[i] && indegree[i] == 0) {
+                cur = i;
+                vis[i] = true;
+                break;
+            }
+        }
+        ans.push_back(cur);
+
+        for (auto v : g[cur]) {
+            indegree[v]--;
+        }
+    }
+    for (auto x : ans) {
+        cout << x << endl;
     }
 
-    for (int i = 1; i <= n; i++)
-    {
-        cout<<i<<" Outdegree "<<outdegree[i]<<nl;
-    }
 
 
-    
+
 
     return 0;
 }
