@@ -15,9 +15,9 @@ int main() {
         g[u].push_back(v);
         g[v].push_back(u);
     }
-    // for(auto x : g[2]){
-    //     cout<<x<<" "; 
-    // }
+    for(auto x : g[2]){
+        cout<<x<<" "; 
+    }
 
     //Degree
     for(int i = 1;i<=n;i++){
