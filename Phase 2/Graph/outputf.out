@@ -1,5 +1,5 @@
-1 1
-2 3
-3 3
-4 2
-5 3
+Vertex 1: Indegree = 1, Outdegree = 1
+Vertex 2: Indegree = 3, Outdegree = 3
+Vertex 3: Indegree = 3, Outdegree = 3
+Vertex 4: Indegree = 2, Outdegree = 2
+Vertex 5: Indegree = 3, Outdegree = 3
