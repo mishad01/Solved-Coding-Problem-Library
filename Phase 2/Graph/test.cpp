@@ -1,48 +1,28 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 #define ll long long
 #define nl '\n'
 const int N = 105;
-vector<int> g[N];
-int indegree[N], outdegree[N];
+int g[N][N];
+int indegree[N], outdegree[N],color[N];
 bool vis[N];
-
+bool ok = true;
+bool cycle;
 int main() {
-    int n, m;
-    cin >> n >> m;
+    int n;cin>>n;
 
-    // Read the edges
-    while (m--) {
-        int u, v;
-        cin >> u >> v;
-        g[u].push_back(v);
-        indegree[v]++;
-    }
-
-    vector<int>ans;
-    while (ans.size() < n) {
-        int cur = 0;
-        for (int i = 1; i <= n; i++) {
-            
-            if (!vis[i] && indegree[i] == 0) {
-                cur = i;
-                vis[i] = true;
-                break;
-            }
-        }
-        ans.push_back(cur);
-
-        for (auto v : g[cur]) {
-            indegree[v]--;
+    for(int i = 1;i<=n;i++){
+        int u,k;cin>>u>>k;
+        while(k--){
+            int v;
+            cin>>v;
+            g[u][v]=1;
         }
     }
-    for (auto x : ans) {
-        cout << x << endl;
+    for(int i = 1;i<=n;i++){
+        for(int j = 1;j<=n;j++){
+            cout<<g[i][j]<<' ';
+        }
+        cout<<nl;
     }
-
-
-
-
-
-    return 0;
 }
