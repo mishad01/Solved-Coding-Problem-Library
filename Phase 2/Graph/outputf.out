@@ -1,4 +1,6 @@
-0 1 0 1 
-0 0 0 1 
-0 0 0 0 
-0 0 1 0 
+a is an identifier
+= is an operator
+b is an identifier
++ is an operator
+c is an identifier
+; is neither an identifier nor an operator

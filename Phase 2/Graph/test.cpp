@@ -2,27 +2,27 @@
 using namespace std;
 #define ll long long
 #define nl '\n'
-const int N = 105;
-int g[N][N];
-int indegree[N], outdegree[N],color[N];
-bool vis[N];
-bool ok = true;
-bool cycle;
-int main() {
-    int n;cin>>n;
 
-    for(int i = 1;i<=n;i++){
-        int u,k;cin>>u>>k;
-        while(k--){
-            int v;
-            cin>>v;
-            g[u][v]=1;
+bool isOperator(char c) {
+    string operators = "+-*/%=&|<>!^~";
+    return operators.find(c) != string :: npos;
+}
+
+bool isIdentifierStart(char c) {
+    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c == '_');
+}
+
+int main() {
+    string s;
+    cin >> s;
+    for(int i = 0; i < s.size(); i++){
+        if(isIdentifierStart(s[i])){
+            cout << s[i] << " is an identifier" << nl;
+        } else if(isOperator(s[i]) || s[i] == '@' || s[i] == ':'){
+            cout << s[i] << " is an operator" << nl;
+        } else {
+            cout << s[i] << " is neither an identifier nor an operator" << nl;
         }
     }
-    for(int i = 1;i<=n;i++){
-        for(int j = 1;j<=n;j++){
-            cout<<g[i][j]<<' ';
-        }
-        cout<<nl;
-    }
+    return 0;
 }
