@@ -1,28 +1,17 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define ll long long
-#define nl '\n'
-
-bool isOperator(char c) {
-    string operators = "+-*/%=&|<>!^~";
-    return operators.find(c) != string :: npos;
-}
-
-bool isIdentifierStart(char c) {
-    return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c == '_');
-}
-
-int main() {
-    string s;
-    cin >> s;
-    for(int i = 0; i < s.size(); i++){
-        if(isIdentifierStart(s[i])){
-            cout << s[i] << " is an identifier" << nl;
-        } else if(isOperator(s[i]) || s[i] == '@' || s[i] == ':'){
-            cout << s[i] << " is an operator" << nl;
-        } else {
-            cout << s[i] << " is neither an identifier nor an operator" << nl;
+class Solution {
+public:
+    vector<int> majorityElement(vector<int>& nums) {
+        int n=nums.size();
+        unordered_map<int,int> store;
+        vector<int> ans;
+        for(int i=0;i<n;i++){
+            store[nums[i]]++;
         }
+        for(auto& pair : store){
+            if(pair.second>n/3){
+                ans.push_back(pair.first);
+            }
+        }
+        return ans;
     }
-    return 0;
-}
+};
