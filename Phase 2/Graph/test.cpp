@@ -1,21 +1,13 @@
-class Solution {
-public:
-static bool compare(const pair<int, string>& a, const pair<int, string>& b) {
-        return b.first < a.first; 
+#include <bits/stdc++.h>
+using namespace std;
+     
+int main() {
+    int n,x;
+    cin>>n>>x;
+    int res = 0;
+    for(int i = 1;i<=n;i++){
+        res = res + i;
+        cerr<<res<<endl;
     }
-    vector<string> sortPeople(vector<string>& names, vector<int>& heights) {
-        int n = names.size();
-        vector<pair<int,string>>hnp;
-
-        for(int i = 0;i<n;i++){
-            hnp.push_back({heights[i],names[i]});
-        }
-
-        sort(hnp.begin(),hnp.end(),compare);
-        vector<string>sorted_name;
-        for(auto x : hnp){
-            sorted_name.push_back(x.second);
-        }
-        return sorted_name;
-    }
-};
+    cout<< res * x;
+}
