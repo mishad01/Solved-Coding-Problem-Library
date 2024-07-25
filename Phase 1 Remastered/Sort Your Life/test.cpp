@@ -2,22 +2,28 @@
 using namespace std;
 #define ll long long
 #define nl '\n'
-int main() {
-    int n,x;cin>>n>>x;
-    int a[n];
-    for(int i = 1;i<=n;i++){
-    	cin>>a[i];
-    }
-    int l=1,r=n;
-    while(l<=r){
-    	int mid = (l+r)/2;
-    	if(a[mid]<x){
-    		l = mid+1;
-    	}else if(a[mid]>x){
-    		r = mid-1;
-    	}else if(x==a[mid]){
-            cout<<"True"<<nl;
-            break;
+int sumIndicesWithKSetBits(vector<int>& nums, int k) {
+    int n = nums.size();
+    int sum = 0;
+    for (auto x : nums) {
+        cerr<<__builtin_popcount(x)<<nl;
+        if (__builtin_popcount(x) == k) {
+            sum += x;
         }
     }
+    return sum;
 }
+int main() {
+    vector<int>v = {4,3,2,1};
+    cout<<sumIndicesWithKSetBits(v,2);
+}
+
+/*
+000 0
+001 1
+010 2
+011 3
+100 4
+101 5
+110 6 
+111 7*/
