@@ -10,7 +10,7 @@ int sum(int n){
         return 0;
     }
     res = sum(n-1)+n;
-    cout<<"Returning to "<<res<<nl;
+    cout<<"Returning to "<<res<<" from "<<n<<nl;
     return res;
 }
 int main() {
