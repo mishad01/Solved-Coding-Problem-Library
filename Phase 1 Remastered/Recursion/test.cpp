@@ -11,5 +11,5 @@ int main() {
     int n;
     cin>>n;
     cout<<pow_of_2(n);
-    cout<<pow_of_2(5);
+    //cout<<pow_of_2(5);
 }
