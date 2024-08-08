@@ -3,7 +3,7 @@ using namespace std;
 #define ll long long
 #define nl '\n'
 int pow_of_2(int n){
-    cout<<"We are at "<<n<<nl;
+    //cout<<"We are at "<<n<<nl;
     if(n==0)return 1;
     return pow_of_2(n-1)+pow_of_2(n-1);
 }
