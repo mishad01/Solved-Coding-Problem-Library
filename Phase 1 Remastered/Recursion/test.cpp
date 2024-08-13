@@ -2,14 +2,25 @@
 using namespace std;
 #define ll long long
 #define nl '\n'
-int pow_of_2(int n){
-    //cout<<"We are at "<<n<<nl;
-    if(n==0)return 1;
-    return pow_of_2(n-1)+pow_of_2(n-1);
+string check(vector<string>& arr) {
+    int n = arr.size();
+    unordered_map<string, int> mp;
+
+    for (string c : arr) {
+        mp[c]++;
+    }
+    for ( auto x: mp) {
+        cout << x.first << ": " << x.second << std::endl;
+    }
+
 }
 int main() {
-    int n;
-    cin>>n;
-    cout<<pow_of_2(n);
-    //cout<<pow_of_2(5);
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int n;cin>>n;
+    vector<string>v(n);
+    for(int i =0;i<n;i++){
+        cin>>v[i];
+    }
+    check(v);
 }
