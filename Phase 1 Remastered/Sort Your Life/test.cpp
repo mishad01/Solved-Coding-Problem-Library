@@ -1,29 +1,31 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 #define ll long long
 #define nl '\n'
-int sumIndicesWithKSetBits(vector<int>& nums, int k) {
-    int n = nums.size();
-    int sum = 0;
-    for (auto x : nums) {
-        cerr<<__builtin_popcount(x)<<nl;
-        if (__builtin_popcount(x) == k) {
-            sum += x;
+
+int main() {
+    string s;
+    getline(cin, s);
+    stack<string> st;
+    string word;
+
+    // Split the string into words and push each word to the stack
+    for (auto x : s) {
+        if(x==' '){
+            st.push(word);
+            word="";
+        }else{
+            word+=x;
         }
     }
-    return sum;
-}
-int main() {
-    vector<int>v = {4,3,2,1};
-    cout<<sumIndicesWithKSetBits(v,2);
-}
+    st.push(word); // Push the last word
 
-/*
-000 0
-001 1
-010 2
-011 3
-100 4
-101 5
-110 6 
-111 7*/
+    // Print and pop words from the stack
+    while (!st.empty()) {
+        cout << st.top() << " ";
+        st.pop();
+    }
+    cout << nl;
+
+    return 0;
+}
