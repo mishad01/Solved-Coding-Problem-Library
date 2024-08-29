@@ -1,31 +1,23 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
-#define ll long long
-#define nl '\n'
 
-int main() {
-    string s;
-    getline(cin, s);
-    stack<string> st;
-    string word;
-
-    // Split the string into words and push each word to the stack
-    for (auto x : s) {
-        if(x==' '){
-            st.push(word);
-            word="";
-        }else{
-            word+=x;
+void subArray(int a[], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = i; j < n; j++) {
+            for(int k = i;k<=j;k++){
+                cout<<a[k]<<" ";
+            }
+            cout << "\n";
         }
     }
-    st.push(word); // Push the last word
+}
 
-    // Print and pop words from the stack
-    while (!st.empty()) {
-        cout << st.top() << " ";
-        st.pop();
-    }
-    cout << nl;
+int main() {
+    int arr[] = {1, 2, 3, 4};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    subArray(arr, n);
+    cout<<"test"<<endl;
 
     return 0;
 }
