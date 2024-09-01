@@ -52,7 +52,7 @@ int main() {
         
         Solution obj;
         vector<string> result = obj.winner(arr, n);
-        cout << result[0] << " " << result[1] << endl;
+        cout << result[0] << " " << result[1] <<" " endl;
     }
     return 0;
 }
