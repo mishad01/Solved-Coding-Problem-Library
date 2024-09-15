@@ -1,49 +1,20 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define ll long long
-#define nl '\n'
-const int N = 1e5+9;
-bool f[N];
-int main() {
-	ios_base::sync_with_stdio(0);
-	cin.tie(0);
-	int n;cin>>n;
-	f[1] = true;
-	vector<int>v;
-	for(int i = 2;i<=n;i++){
-		if(f[i]==false){
-			v.push_back(i);
-			for(int j = i+i;j<=n;j=j+i){
-				cerr<<j<<endl;
-				f[j]=true;
-			}
-		}
-	}
-	for(auto x: v){
-		cout<<x<<" ";
-	}
-}
+typedef long long ll;
 class Solution {
 public:
-    int countPrimes(int n) {
-        if (n <= 2) return 0; // No primes less than 2
-
-        vector<bool> is_prime(n, true); // Create a boolean array of size n
-        is_prime[0] = is_prime[1] = false; // 0 and 1 are not prime numbers
-
-        for (int i = 2; i * i < n; ++i) {
-            if (is_prime[i]) {
-                for (int j = i * i; j < n; j += i) {
-                    is_prime[j] = false; // Mark all multiples of i as not prime
-                }
-            }
+    long long minimumCost(string s) {
+        int n = s.size();
+        vector<ll> ps(n);
+        ll ss = 0;
+        for(int i = 1; i < n; i += 1) {
+            if(s[i - 1] != s[i]) {
+                ps[i] += (ps[i - 1] + i);
+            } else ps[i] = ps[i - 1];
         }
-
-        int count = 0;
-        for (int i = 2; i < n; ++i) {
-            if (is_prime[i]) count++; // Count the number of primes
+        ll ans = 1e14;
+        for(int i = n - 2; i >= 0; i -= 1) {
+            if(s[i] != s[i + 1]) ss += (n - i - 1);
+            ans = min(ans,ps[i] + ss);
         }
-
-        return count;
+        return min(ans,ss);
     }
 };
