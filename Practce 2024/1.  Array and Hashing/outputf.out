@@ -1,4 +1,1 @@
-ALPHA = +T
-BETA = T
-E->TE'
-E'->+TE'| e
+1

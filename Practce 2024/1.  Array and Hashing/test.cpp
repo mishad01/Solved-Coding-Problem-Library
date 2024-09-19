@@ -1,36 +1,28 @@
-//E->E+T/T
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-int main() {
-    string s;
-    cin >> s;
-
-    char check = s[0];
-
-    string alpha = "";
-    string beta = "";
-
-    size_t found1 = s.find("->");
-    size_t found2 = s.find("|");
-
-    if (found2) {
-        beta = s.substr(found2 + 1);
-        s = s.substr(0, found2);
+#define ll long long
+#define nl '\n'
+int dominantIndex(vector<int>& nums) {
+    int maxv = 0;
+    for (auto x : nums) {
+        maxv = max(maxv, x);
     }
-    if (found1) {
-        s.erase(found1, 2);
-    }
-    for (int i = 1; i < s.size(); i++) {
-        if (s[i] != check) {
-            alpha += s[i];
+    auto it = find(nums.begin(), nums.end(), maxv);
+    int maxIndex = distance(nums.begin(), it);
+    for (int i = 0; i < nums.size(); i++) {
+        if (nums[i] * 2 > maxv && nums[i] != maxv) {
+            return -1;
         }
     }
-    cout << "ALPHA = " << alpha << endl;
-    cout << "BETA = " << beta << endl;
-    cout << check << "->" << beta << check << "'" << endl;
-    cout << check << "'->" << alpha << check << "'| e" << endl;
-
-
-    return 0;
-
+    return maxIndex;
+}
+int main() {
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    int n; cin >> n;
+    vector<int>v(n);
+    for (int i = 0; i < n; i++) {
+        cin >> v[i];
+    }
+    cout << dominantIndex(v);
 }
