@@ -1,4 +1,4 @@
-ALPHA = a
-BETA = b
-A->bA'
-A'->aA'| e
+ALPHA = +T
+BETA = T
+E->TE'
+E'->+TE'| e

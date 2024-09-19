@@ -1,20 +1,36 @@
-typedef long long ll;
-class Solution {
-public:
-    long long minimumCost(string s) {
-        int n = s.size();
-        vector<ll> ps(n);
-        ll ss = 0;
-        for(int i = 1; i < n; i += 1) {
-            if(s[i - 1] != s[i]) {
-                ps[i] += (ps[i - 1] + i);
-            } else ps[i] = ps[i - 1];
-        }
-        ll ans = 1e14;
-        for(int i = n - 2; i >= 0; i -= 1) {
-            if(s[i] != s[i + 1]) ss += (n - i - 1);
-            ans = min(ans,ps[i] + ss);
-        }
-        return min(ans,ss);
+//E->E+T/T
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    string s;
+    cin >> s;
+
+    char check = s[0];
+
+    string alpha = "";
+    string beta = "";
+
+    size_t found1 = s.find("->");
+    size_t found2 = s.find("|");
+
+    if (found2) {
+        beta = s.substr(found2 + 1);
+        s = s.substr(0, found2);
     }
-};
+    if (found1) {
+        s.erase(found1, 2);
+    }
+    for (int i = 1; i < s.size(); i++) {
+        if (s[i] != check) {
+            alpha += s[i];
+        }
+    }
+    cout << "ALPHA = " << alpha << endl;
+    cout << "BETA = " << beta << endl;
+    cout << check << "->" << beta << check << "'" << endl;
+    cout << check << "'->" << alpha << check << "'| e" << endl;
+
+
+    return 0;
+
+}
