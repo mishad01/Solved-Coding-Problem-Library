@@ -1,12 +1,24 @@
 class Solution {
 public:
-    bool judgeSquareSum(int c) {
-        for (long long a = 0; a * a <= c; a++) {
-            long long b = sqrt(c - a * a);
-            if (a * a + b * b == c) {
-                return true;
+    void setZeroes(vector<vector<int>>& matrix) {
+        int rs = matrix.size();
+        int cs = matrix[0].size();
+        vector<bool>row(rs,0);
+        vector<bool>col(cs,0);
+        for(int i = 0;i<rs;i++ ){
+            for(int j = 0;j<cs;j++){
+                if(matrix[i][j]==0){
+                    row[i]=1;
+                    col[j]=1;
+                }
             }
         }
-        return false;
+        for(int i = 0;i<rs;i++ ){
+            for(int j = 0;j<cs;j++){
+                if(row[i]==1 || col[j]==1){
+                    matrix[i][j]=0;
+                }
+            }
+        }
     }
 };
