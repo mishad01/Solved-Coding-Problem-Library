@@ -6,29 +6,22 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-
-    int t;
-    cin >> t;  // Number of test cases
-    while (t--) {
-        int n;
-        cin >> n;  // Number of notes in the melody
-        
-        vector<int> notes(n);
-        for (int i = 0; i < n; ++i) {
-            cin >> notes[i];  // Read the notes
+    ll n;
+    cin>>n;
+    ll sum = 0;
+    ll oddNum ;
+    while(n--){
+        ll num;
+        cin>>num;
+        if(num % 2==1){
+            oddNum = min(oddNum,num);
         }
-        
-        bool isPerfect = true;
-        for (int i = 1; i < n; ++i) {
-            int interval = abs(notes[i] - notes[i - 1]);
-            if (interval != 5 && interval != 7) {
-                isPerfect = false;
-                break;  // No need to check further if one interval is invalid
-            }
-        }
-        
-        cout << (isPerfect ? "YES" : "NO") << nl;
+        sum+=num;
     }
-
-    return 0;
+    if(sum%2==0){
+        cout<<sum;
+    }else{
+        sum = sum - oddNum;
+        cout<<sum;
+    }
 }
