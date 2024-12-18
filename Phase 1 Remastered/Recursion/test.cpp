@@ -2,25 +2,23 @@
 using namespace std;
 #define ll long long
 #define nl '\n'
-string check(vector<string>& arr) {
-    int n = arr.size();
-    unordered_map<string, int> mp;
 
-    for (string c : arr) {
-        mp[c]++;
-    }
-    for ( auto x: mp) {
-        cout << x.first << ": " << x.second << std::endl;
-    }
+int printAsc(int n){
+    if(n==0) return 1;
+    printAsc(n-1);
+    cout<<n<<nl;
+}
 
+int printDes(int n){
+    if(n==0) return 1;
+    cout<<n<<nl;
+    printDes(n-1);
 }
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int n;cin>>n;
-    vector<string>v(n);
-    for(int i =0;i<n;i++){
-        cin>>v[i];
-    }
-    check(v);
+    cout<<"printDesc"<<nl;
+    printDes(5);
+    cout<<"printAsc"<<nl;
+    printAsc(5);
 }
