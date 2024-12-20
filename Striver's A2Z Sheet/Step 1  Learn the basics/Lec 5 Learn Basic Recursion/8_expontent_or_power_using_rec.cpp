@@ -8,7 +8,7 @@ pow = |                          |
       |m*pow(m,n-1)   if n>0     | 
 */
 int pow(int m,int n){
-	if(n==0){ 
+	if(n==0){ ]
 		return 1;
 	}
 	return m*pow(m,n-1);
