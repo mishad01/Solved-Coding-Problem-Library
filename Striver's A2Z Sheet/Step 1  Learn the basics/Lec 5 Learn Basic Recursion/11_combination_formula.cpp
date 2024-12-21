@@ -28,6 +28,6 @@ int NCR(int n, int r){
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    cout<<ncr(5,3);
+    cout<<ncr(5,2);
     return 0;
 }
