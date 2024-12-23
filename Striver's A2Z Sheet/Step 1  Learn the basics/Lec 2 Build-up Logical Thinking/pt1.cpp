@@ -44,7 +44,6 @@ void p4(int r,int c){
 }
 void p5(int r,int c){
 	cout<<"Patter 2 : "<<nl;
-	cout<<"----------"<<nl;
 	for(int i = 1;i<=r;i++){
     	for(int j = 1;j<=c-i+1;j++){
     		cout<<"*";
