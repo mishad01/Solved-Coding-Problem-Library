@@ -94,11 +94,17 @@ void p8(int n){
 		cout<<nl;	
 	}
 }
+void p9(int n){
+	for(int i = 0;i<1;i++){
+		p7(n);
+		p8(n);
+	}
+}
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int r,c;
     cin>>r>>c;
-    p8(r);
+    p9(r);
     return 0;
 }
