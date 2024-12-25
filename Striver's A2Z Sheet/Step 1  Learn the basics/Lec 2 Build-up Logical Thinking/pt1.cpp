@@ -62,13 +62,36 @@ void p6(int r,int c){
 }
 void p7(int n){
 	for(int i = 0;i<n;i++){
-		for(int j = 0;j<n;j++){
-			cout<<j;
+		//space
+		for(int j = 0;j<n-i-1;j++){
+			cout<<" ";
 		}
-		 cout<<nl;
-		for(int j = 0;j<n;j++){
-			cout<<j+1<< "C ";
+		//*
+		for(int j = 0;j<2*i+1;j++){
+			cout<<"*";
 		}
+		//space
+		for(int j = 0;j<n;j++){
+			cout<<" ";
+		}
+		cout<<nl;
+	}
+}
+void p8(int n){
+	for(int i = 0;i<n;i++){
+		//space
+		for(int j = 0;j<i;j++){
+			cout<<" ";
+		}
+		//star
+		for(int j = 0;j<(2*n)-(2*i+1);j++){\
+			cout<<"*";
+		}
+		//space
+	    for(int j = 0;j<i;j++){
+			cout<<" ";
+		}	
+		cout<<nl;	
 	}
 }
 int main() {
@@ -76,6 +99,6 @@ int main() {
     cin.tie(0);
     int r,c;
     cin>>r>>c;
-    p7(r);
+    p8(r);
     return 0;
 }
