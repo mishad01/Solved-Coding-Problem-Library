@@ -51,11 +51,31 @@ void p5(int r,int c){
     	cout<<nl;
     }
 }
+void p6(int r,int c){
+	cout<<"Patter 6 : "<<nl;
+	for(int i = 1;i<=r;i++){
+    	for(int j = 1;j<=c-i+1;j++){
+    		cout<<j;
+    	}
+    	cout<<nl;
+    }
+}
+void p7(int n){
+	for(int i = 0;i<n;i++){
+		for(int j = 0;j<n;j++){
+			cout<<j;
+		}
+		 cout<<nl;
+		for(int j = 0;j<n;j++){
+			cout<<j+1<< "C ";
+		}
+	}
+}
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int r,c;
     cin>>r>>c;
-    p5(r,c);
+    p7(r);
     return 0;
 }
