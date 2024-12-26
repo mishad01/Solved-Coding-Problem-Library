@@ -209,11 +209,86 @@ void p16(int n){
     	cout<<nl;
     }
 }
+void p17(int n){
+	for(int i = 0;i<n;i++){
+		char c = 'A';
+		//space
+		for(int j = 0;j<n-i-1;j++){
+			cout<<" ";
+		}
+		//*
+		int brkPoint = (2*i+1)/2;
+		for(int j = 0;j<2*i+1;j++){
+			cout<<c;
+			if(j<=brkPoint){
+				c++;
+			}else{
+				c--;
+			}
+		}
+		//space
+		for(int j = 0;j<n;j++){
+			cout<<" ";
+		}
+		cout<<nl;
+	}
+}
+void p18(int n){
+	char c= 'E';
+	for(int i = 0;i<n;i++){
+    	for(char ch = 'E'-i;ch<='E';ch++){
+    		cout<<ch<<" ";
+    	}
+    	cout<<nl;
+    }
+}
+
+void p19_p1(int n){
+	for(int i = 0;i<n;i++){
+		//star
+		for(int j = 0;j<n-i;j++){
+			cout<<"*";
+		}
+		//space 
+		for(int j = 0;j<=2*i-1;j++){
+			cout<<" ";
+		}
+		//star
+		for(int j = 0;j<n-i;j++){
+			cout<<"*";
+		}
+		cout<<nl;
+
+	}
+}
+void p19_p2(int n){
+	for(int i = 0;i<n;i++){
+		//star
+		for(int j = 0;j<i+1;j++){
+			cout<<"*";
+		}
+		//space 
+		for(int j = 0;j<(2*n)-(i*2)-2;j++){
+			cout<<" ";
+		}
+		//star
+		for(int j = 0;j<i+1;j++){
+			cout<<"*";
+		}
+		cout<<nl;
+
+	}
+}
+void p19(int n){
+	p19_p1(n);
+	p19_p2(n);
+
+}
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int r,c;
     cin>>r>>c;
-    p16(r);
+    p19(r);
     return 0;
 }
