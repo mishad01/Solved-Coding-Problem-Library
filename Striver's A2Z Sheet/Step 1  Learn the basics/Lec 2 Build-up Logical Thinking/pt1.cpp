@@ -284,11 +284,76 @@ void p19(int n){
 	p19_p2(n);
 
 }
+
+void p20b(int n){
+	for(int i = 0;i<n;i++){
+		//star 
+		for(int j = 1;j<=n-1-i;j++){
+			cout<<"*";
+		}
+		//space
+		for(int j = 1;j<=2*i+2;j++){
+			cout<<" ";
+		}
+		//star 
+		for(int j = 1;j<=n-1-i;j++){
+			cout<<"*";
+		}
+		cout<<nl;
+	}
+}
+void p20(int n){
+	p19_p2(n);
+	p20b(n);
+}
+void p21(int n){
+	for(int i = 0;i<n;i++){
+		if(i==0 || i==(n-1)){
+			for(int j = 0;j<n;j++){
+				cout<<"*";
+			}
+			cout<<nl;
+		}else{
+			for(int j = 0;j<n;j++){
+				if(j==0 || j==n-1){
+					cout<<"*";
+				}else{
+					cout<<" ";
+				}
+			}
+			cout<<nl;
+		}
+	}
+}
+void p21b(int n){
+	for(int i = 0;i<n;i++){
+		for(int j = 0;j<n;j++){
+			if(i==0 || i==n-1||j==0||j==n-1){
+				cout<<"*";
+			}else{
+				cout<<" ";
+			}
+		}
+		cout<<nl;
+	}
+}
+void p22(int n){
+	for(int i = 0;i<n;i++){
+		for(int j = 0;j<n;j++){
+			if(i==0 || i==n-1||j==0||j==n-1){
+				cout<<"4";
+			}else{
+				cout<<"3";
+			}
+		}
+		cout<<nl;
+	}
+}
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int r,c;
     cin>>r>>c;
-    p19(r);
+    p22(r);
     return 0;
 }
