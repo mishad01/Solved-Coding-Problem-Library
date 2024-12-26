@@ -1,10 +1,15 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define ll long long
-#define nl '\n'
-int main() {
-    ios_base::sync_with_stdio(0);
-    cin.tie(0);
-    // Your code here
-    return 0;
+void p11(int n) {
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) {
+            for (int j = 0; j < i + 1; j++) {
+                if (j % 2 == 0) {
+                    cout << "1";
+                } else {
+                    cout << "0";
+                }
+            }
+        }
+
+        cout << nl;
+    }
 }
