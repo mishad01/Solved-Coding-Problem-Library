@@ -1,0 +1,37 @@
+1. **`v.begin()`**:  
+   - **What it gives**: Returns an iterator pointing to the first element of the vector.  
+   - **Usage**: You can dereference it using `*v.begin()` to access the value stored at the first position in the vector.  
+
+   ```cpp
+   std::vector<int> v = {1, 2, 3};
+   std::cout << *v.begin(); // Output: 1
+   ```
+
+2. **`v.end()`**:  
+   - **What it gives**: Returns an iterator pointing to the **theoretical element** after the last element in the vector.  
+   - **Note**: This is not a valid element of the vector; it's used to mark the end of the range.  
+   - **Example**: You shouldn't dereference `v.end()`, but it's useful in loops or algorithms to mark the range.
+
+   ```cpp
+   for (auto it = v.begin(); it != v.end(); ++it) {
+       std::cout << *it << " "; // Outputs all elements: 1 2 3
+   }
+   ```
+
+3. **`v.rend()`**:  
+   - **What it gives**: Returns a reverse iterator pointing to the **theoretical element before the first element** of the vector.  
+   - **Usage**: Used in reverse iteration, usually as a marker.
+
+   ```cpp
+   for (auto it = v.rbegin(); it != v.rend(); ++it) {
+       std::cout << *it << " "; // Outputs in reverse order: 3 2 1
+   }
+   ```
+
+4. **`v.rbegin()`**:  
+   - **What it gives**: Returns a reverse iterator pointing to the last element of the vector.  
+   - **Usage**: Useful for iterating in reverse order.
+
+In summary:
+- `begin` and `end` work for forward iteration.
+- `rbegin` and `rend` work for reverse iteration.  
