@@ -5,7 +5,7 @@ void p11(int n) {
                 if (j % 2 == 0) {
                     cout << "1";
                 } else {
-                    cout << "0";
+                    cout << "01";
                 }
             }
         }
