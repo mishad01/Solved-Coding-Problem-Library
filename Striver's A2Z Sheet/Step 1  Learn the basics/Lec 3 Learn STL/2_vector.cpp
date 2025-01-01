@@ -68,7 +68,7 @@ int main() {
 	}
 
 	cout << nl;
-	//v.rend()
+	//v
 	for (auto it = v.rbegin(); it != v.rend(); ++it) {
 		std::cout << *it << " "; // Outputs in reverse order: 3 2 1
 	}
