@@ -47,7 +47,7 @@ int main() {
 	it++;
 	cout << *(it) << " ";
 
-	it += 2;
+	it += 1;
 	cout << *(it) << " ";
 
 	cout << nl;
