@@ -100,6 +100,4 @@ int main() {
 	v.clear() //clears everything
 
 	v.empty() //return true if empty
-
-	return 0;
 }
