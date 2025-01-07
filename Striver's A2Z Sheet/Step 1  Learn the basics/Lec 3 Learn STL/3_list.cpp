@@ -37,6 +37,14 @@ int main() {
     cout << nl;
 
     // Insert elements at a specific position
+
+    list<int> ls5 = {1, 3, 7,8,9};
+    ls5.insert(ls5.begin(),1,9);
+    for (auto x : ls5) {
+        cout << x << " ";
+    }
+
+    cout << nl;
     auto it = ls.begin();
     advance(it, 2);  // Move iterator to the 2nd position
     ls.insert(it, 10); // Insert 10 at 2nd position: 6 5 10 2 4
@@ -78,6 +86,8 @@ int main() {
     // Check size
     cout << "Size of List 1: " << ls.size() << nl;
     cout << "Size of List 2: " << ls2.size() << nl;
+
+  
 
     return 0;
 }
