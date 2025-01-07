@@ -1,11 +1,10 @@
-1
-2
-3
-4
-5
-2 2 2 2 2 
-2 2 2 2 2 
-2 4 
-1
-1 2 3 4 5 
-5 4 3 2 1 
+Initial list: 6 5 2 4 
+Using iterators (begin to end): 6 5 2 4 
+Using reverse iterators (rbegin to rend): 4 2 5 6 
+After insert at position 2: 6 5 10 2 4 
+List 2 before swap: 1 3 7 
+List 1 after swap: 1 3 7 
+List 2 after swap: 6 5 10 2 4 
+List 1 after clear: 
+Size of List 1: 0
+Size of List 2: 5
