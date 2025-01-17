@@ -13,7 +13,7 @@ int main() {
     st.push(4); //4 3 2 1
     st.emplace(5); //5 4 3 2 1
     st.push(6);
-    st.push(6);
+    st.push(7);
     cout<<st.top()<<nl;
     cout<<st.size()<<nl;
     return 0;
