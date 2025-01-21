@@ -1,2 +1,10 @@
-6
-6
+Map mp elements:
+1 -> 100
+2 -> 200
+3 -> 300
+4 -> 400
+Value at key 2: 200
+After erase Map mp elements:
+1 -> 100
+3 -> 300
+4 -> 400
