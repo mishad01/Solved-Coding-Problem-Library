@@ -1,10 +1,6 @@
-Map mp elements:
-1 -> 100
-2 -> 200
-3 -> 300
-4 -> 400
-Value at key 2: 200
-After erase Map mp elements:
-1 -> 100
-3 -> 300
-4 -> 400
+Array Sort : 
+1 3 7 23 34 45 67 
+Vector Sort : 
+1 34 7 3 45 67 23 
+Descending  Sort : 
+67 45 34 23 7 3 1 
