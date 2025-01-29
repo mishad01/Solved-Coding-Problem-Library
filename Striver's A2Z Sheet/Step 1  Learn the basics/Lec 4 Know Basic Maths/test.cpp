@@ -5,8 +5,9 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    string S, T, R;
-    cin >> S >> T>> R;
+
+    string S, T;
+    cin >> S >> T;
    
     unordered_map<char, int> pentagon = {
         {'A', 0}, {'B', 1}, {'C', 2}, {'D', 3}, {'E', 4}
@@ -21,7 +22,7 @@ int main() {
     int distT = min(abs(t1 - t2), 5 - abs(t1 - t2));
 
     if (distS == distT) {
-        cout << "Yes" << endl;
+        cout << "YesS" << endl;
     } else {
         cout << "No" << endl;
     }
