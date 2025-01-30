@@ -22,7 +22,7 @@ int main() {
     int distT = min(abs(t1 - t2), 5 - abs(t1 - t2));
 
     if (distS == distT) {
-        cout << "YesS" << endl;
+        cout << "YesSS" << endl;
     } else {
         cout << "No" << endl;
     }
