@@ -19,7 +19,7 @@ void bubble_sort(int arr[], int n) {
     }
 
     cout << "After Using bubble sort: " << "\n";
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i <= n; i++) {
         cout << arr[i] << " ";
     }
     cout << "\n";
