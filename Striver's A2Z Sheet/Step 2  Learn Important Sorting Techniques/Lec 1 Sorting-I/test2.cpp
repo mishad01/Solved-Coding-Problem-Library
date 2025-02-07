@@ -2,23 +2,18 @@
 using namespace std;
 #define ll long long
 #define nl '\n'
+bool isLiked(int number) {
+    return number % 3 != 0 && number % 10 != 3;
+}
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    int n;
-    cin >> n;
-    while (n--) {
-        int a,b,c;
-        cin>>a>>b>>c;
-        int day = c*24*60;
-        int total_time = a*b;
-        if(day>=total_time){
-            cout<<"YES"<<nl;
-        }else{
-            cout<<"NO"<<nl;
-        }
+    int t;
+    cin >> t;
+    while (t--) {
+        int count = 0;
+        int number = 0;
+        
     }
-
-
     return 0;
 }
