@@ -11,7 +11,7 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
-        int count = 1;
+        int count = ;
         int number = 0;
         
     }
