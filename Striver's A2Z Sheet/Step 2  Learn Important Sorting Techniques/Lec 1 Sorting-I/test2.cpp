@@ -12,7 +12,7 @@ int main() {
     cin >> t;
     while (t--) {
         int count = ;
-        int number = 0;
+        int number = 1;
         
     }
     return 0;
