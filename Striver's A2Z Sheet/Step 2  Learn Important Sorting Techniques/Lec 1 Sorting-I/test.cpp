@@ -12,7 +12,7 @@ int main() {
     for(int i = 0;i<n;i==){
         
     }
-    cout<<"EDU CLUB APP";
+    cout<<"EDU CLUB APP OPTMIZE";
 
     return 0;
 }
