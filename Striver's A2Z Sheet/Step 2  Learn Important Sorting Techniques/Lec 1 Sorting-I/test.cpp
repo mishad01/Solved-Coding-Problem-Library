@@ -12,7 +12,7 @@ int main() {
     for(int i = 0;i<n;i==){
         
     }
-    cout<<"edu bridge update";
+    cout<<"ode to code update";
 
     return 0;
 }
