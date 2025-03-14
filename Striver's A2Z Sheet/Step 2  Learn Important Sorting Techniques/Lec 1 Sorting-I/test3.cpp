@@ -10,7 +10,7 @@ int main() {
     int n = t*2;
     int [n];
     for(int i = 0;i<n;i==){
-        cout<<i+2<<endl;
+        cout<<i+3<<endl;
     }
 
     return 0;
