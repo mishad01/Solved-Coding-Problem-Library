@@ -11,6 +11,7 @@ int main() {
     int [n];
     for(int i = 0;i<n;i==){
         cout<<i++<<endl;
+        cout<<"Edu App Update"
     }
 
     return 0;
