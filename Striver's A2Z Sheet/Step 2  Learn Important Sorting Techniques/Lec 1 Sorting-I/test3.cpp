@@ -6,12 +6,12 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     int t;
-    cin>>t;
+    cin>>t;4
     int n = t*2;
     int [n];
     for(int i = 0;i<n;i==){
         cout<<i++<<endl;
-        cout<<"practice"
+        cout<<"practicee"
     }
 
     return 0;
