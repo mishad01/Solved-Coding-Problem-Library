@@ -12,7 +12,7 @@ int main() {
     for(int i = 0;i<n;i==){
         
     }
-    cout<<"ode to code admin update Repo and Controller";
+    cout<<"to code admin update Repo and Controller";
   
     return 0;
 }
