@@ -6,7 +6,7 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    int a[] = {1, 7, 9, 3, 5, 2, 4};
+    int a[] = {1, 7, 9, 3, 5, 2, 4,5};
     int n = sizeof(a) / sizeof(a[0]);
 
 
