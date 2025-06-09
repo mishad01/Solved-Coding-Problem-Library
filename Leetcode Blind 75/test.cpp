@@ -3,42 +3,23 @@ using namespace std;
 #define ll long long
 #define nl '\n'
 
-bool isPalindrome(string s){
-	int left = 0;
-	int right= s.size()-1;
-	while(left<right){
-		if(s[left]!=s[right]) return false;
-		left++;
-		right--;
-	}
-	return true;
-}
-int substring(string s) {
-	int maxLen = 0;
-	string longestPalindrome = "";
+int maxProfit(vector<int>& prices) {
+	int n = prices.size();
+	int maximum = 0;
+	for (int i = 0; i < n; i++) {
+		for (int j = i + 1; j < n; j++) {
+			int res = prices[j] - prices[i];;
+			if (prices[i] < prices[j]) {
+				maximum = max(maximum, (prices[j] - prices[i]));
 
-	int n = s.size();
-	set<string>uniqueSub;
-	for(int i = 0;i<n;i++){
-		for(int j = 1;j<=n-i;j++){
-			string sub = s.substr(i,j);
-			uniqueSub.insert(sub);
+			}
+			cerr << res << nl;
 		}
 	}
-	for(auto x : uniqueSub){
-		if(isPalindrome(x) && x.size()>maxLen){
-			maxLen = x.size();
-			longestPalindrome = x;
-		}
-	}
-	cout<<longestPalindrome;
-	return 0;
+	return maximum;
 }
-
 int main() {
-	string s;
-	cin>>s;
-
-	cout<<substring(s);
+	vector<int>v = {7, 1, 5, 3, 6, 4};
+	cout << maxProfit(v);
 
 }
