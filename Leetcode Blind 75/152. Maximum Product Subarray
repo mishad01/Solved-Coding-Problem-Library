@@ -17,5 +17,5 @@ public:
             maxProd = max(maxProd, currMax);
         }
         return maxProd;
-    }
+    }\
 };
