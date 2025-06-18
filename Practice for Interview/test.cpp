@@ -5,7 +5,6 @@ using namespace std;
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
-    vector<vector<int>>v;
-    for(int i = 0;)
+    cout<<"Hello";
     return 0;
 }
