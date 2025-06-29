@@ -23,7 +23,6 @@ int main() {
     		int check2 = a[j]-k;
     		if(b[i]<check1 && b[i]>=check2){
     			count++;
-    			break;
     		}
     	}
     }
